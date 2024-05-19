@@ -1,0 +1,271 @@
+*{box-sizing:border-box}
+header {
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            display: flex; justify-content: space-between;
+            align-content: center;
+            border-bottom-color: antiquewhite;
+            animation: fadeInDown 1s ease-out;
+}
+body {
+            font-family: fantasy;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('background.jpg');
+            background-size: cover;
+}
+footer {
+    width: 100%;
+    align-items: center;
+    max-height: 50px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 970px;
+    padding-top: 1px;
+    color: white;
+    font-size: 15px;
+    right: 0;
+    left: 5;
+    bottom: 0;
+    float: left;
+    display: flex; justify-content: space-evenly;
+}
+.container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 25px;
+            animation: fadeIn 1s ease-out;
+}
+.card {
+    position:relative;
+    align-items: center;
+    text-align: center;
+    max-width: 420px;
+    max-height: 520px;
+    padding: 1px;
+    padding-bottom: 3px;
+    float: right;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.card img {
+    align-items: center;
+    border-radius: 20px;
+    max-width: 420px;
+    max-height: 520px;
+    padding: 1px;
+    backface-visibility: hidden;
+    transition: all 0.3s ease;
+    vertical-align: top;
+}
+.corner::before, .corner::after {
+    position:absolute;
+    content: ' ';
+    background: #fff;
+    z-index: 1;
+    opacity: 10;
+    transition: all 0.4s ease;
+}
+.right-top::before, .right-top::after {
+    top: 1rem;
+    right: 1rem;
+}
+/*more corners*/
+.corner::before {
+    width: 0;
+    height: 5px;
+}
+corner::after {
+    height: 0;
+    width: 1px;
+}
+.card figcaption {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    max-width: 200px;
+    width: 20%;
+    transform: translateY(-50%) translateX(-50%);
+}
+.card h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    color: ghostwhite;
+    font-weight: bold;
+    opacity: 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.2rem;
+    transition: all 0.4s ease;
+}
+.card p {
+    opacity: 0;
+    color: ghostwhite;
+    font-size: 1.1rem;
+    transition: all 0.4s ease;
+}
+.card:hover img {
+    zoom: 1;
+    filter: alpha(opacity=20);
+    opacity: 0.5;
+}
+.card:hover .corner::before {
+    width: 40px;
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+.card:hover .corner::after {
+    width: 40px;
+    opacity: 2;
+    transition-delay: 0.2s;
+}
+.card:hover h3 {
+    opacity: 2;
+    transition-delay: 0.3s;
+}
+.card:hover p {
+    opacity: 2;
+    transition-delay: 0.35s;
+}
+img{
+    align-items: center;
+    border-radius: 20px;
+    max-height: 550px;
+    max-width: 450px;
+    padding: 5px;
+    cursor: pointer;
+    animation: fadeInDown 1s ease-out;
+}
+
+.logo{
+    width: 90px;
+    height: 70px;
+    cursor: pointer;
+    float: left;
+}
+  nav {
+            padding: 25px 0;
+            text-align: center;
+            animation: slideDown 1s ease-out;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 25px;
+        }
+        nav a:hover {
+            border-bottom-style: solid;
+            border-bottom-color: gainsboro;
+            border-bottom-width: 1px;
+        }
+.container {
+            max-width: 700px;
+            font-size: 35px;
+            margin: 20px auto;
+            padding: 0 100px;
+            padding: 100px;
+            float: left;
+            text-align: left;
+            border-radius:30px;
+            animation: fadeIn 1s ease-out;
+        }        
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+        .gallery img
+            width: 100%;
+            height: auto;
+            animation: fadeIn 1s ease-out;
+        }
+        .about {
+            margin-top: 40px;
+            animation: fadeInLeft 1s ease-out;
+        }
+        .contact {
+            margin-top: 40px;
+            animation: fadeInRight 1s ease-out;
+        }
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact input[type="text"],
+        .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .contact input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .contact input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
